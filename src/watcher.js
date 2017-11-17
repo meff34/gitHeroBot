@@ -20,5 +20,3 @@ bot.on('leftChatMember', ({left_chat_member, chat}) => {
             removeChatIdFromConfig(chat.id)
         })
 })
-
-bot.start()

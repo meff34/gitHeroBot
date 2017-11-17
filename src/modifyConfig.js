@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path')
 const { promisify } = require('util');
-var fileName = '../chatIds';
+const fileName = '../chatIds';
 
 
 const writeFileAsync = promisify(fs.writeFile);
@@ -19,7 +19,6 @@ const removeChatIdFromConfig = chatId => {
 
 const writeChatIds = chatIds =>
     writeFileAsync(path.resolve(__dirname, fileName), chatIds ? chatIds.join('\n') : '')
-        .then(() => console.log(JSON.stringify(chatIds), ' -------- success'))
         .catch(err => console.error(err))
 
 const getChatIds = () =>

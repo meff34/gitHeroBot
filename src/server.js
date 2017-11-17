@@ -14,7 +14,8 @@ const handleRequest = (request, response) => {
   const {query} = url.parse(request.url)
   const params = querystring.parse(query)
 
-  notify(params)
+  if (params)
+    notify(params)
 
   response.end()
 }

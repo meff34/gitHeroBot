@@ -1,0 +1,17 @@
+{
+  "name": "git_Hero_Bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/watcher"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "argv": "0.0.2",
+    "pluralize-ru": "^1.0.1",
+    "telebot": "^1.2.3"
+  }
+}

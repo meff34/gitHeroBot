@@ -8,6 +8,7 @@ const commits = ['коммитов', 'коммит', 'коммита', 'комм
 const whole = ['целых', 'целый', 'целых', 'целых']
 
 const makeMessage = ({ username, branch, count, reponame, additional }) => {
+    if (!username || !branch || !count || !reponame || !additional) return 'Я живой!'
     const repo = reponame.replace && reponame.replace('.git', '')
     const pluralizedCommits = pluralize(count, ...commits)
     const pluralizedWhole = pluralize(count, ...whole)
